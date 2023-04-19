@@ -11,5 +11,8 @@ public class BufferedReaderEx {
 
         System.out.println("input1 = " + br.readLine());
         System.out.println("input2 = " + br.readLine());
+
+        System.out.println(br.read() + br.read());
+        //100 입력시에 '1' + '0' 해서 48+49 = 97출력된다.
     }
 }
