@@ -12,4 +12,11 @@ public class JavaInput {
         System.out.println("asciiCode1 = " + asciiCode1);
         System.out.println("asciiCode2 = " + asciiCode2);
     }
+
+    public void readAChars() throws IOException {
+        InputStreamReader is = new InputStreamReader(System.in);
+        int asciiCode1 = is.read();
+
+        System.out.println("asciiCode1 = " + asciiCode1);
+    }
 }
