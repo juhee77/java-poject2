@@ -11,6 +11,6 @@ public class no_1058 {
         boolean flag1 = sc.nextInt() == 1;
         boolean flag2 = sc.nextInt() == 1;
 
-        System.out.println(!(flag1 | flag2) ? 1 : 0);
+        System.out.println(!(flag1 || flag2) ? 1 : 0);
     }
 }
