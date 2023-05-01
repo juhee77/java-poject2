@@ -1,17 +1,96 @@
 package com.example.javaprojtectest2.week3.day1;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Task1 {
     private static final String[] day = {"일", "월", "화", "수", "목", "금", "토"};
+
     public static void main(String[] args) {
         Task1 task = new Task1();
         task.enhancedSwitchSeason(LocalDateTime.now().getMonthValue());
         task.enhancedSwitchDayOfMonth(LocalDateTime.now().getMonthValue());
         task.enhancedSwitchClinicHours(day[LocalDateTime.now().getDayOfWeek().getValue()]);
         task.exForExpression();
+        task.findEven(10);
+        task.findOdd(10);
+        task.loopChar();
+        task.loopUniCode();
+        task.gugu_specifiedDan(new int[]{2,4,6,8});
+        task.gugu(2);
+        task.sum(10);
+    }
+
+    private void sum(int range) {
+        int sum = 0;
+        for (int i = 1; i <= range; i++) {
+            sum += range;
+        }
+        System.out.println(sum);
+    }
+
+    private void gugu(int num) {
+        for (int i = 1; i <= 9; i++) {
+            System.out.printf("%d * %d = %d\n", num, i, num * i);
+        }
+    }
+
+    private void gugu_specifiedDan(int[] dan) {
+        for (int nowDan : dan) {
+            for (int i = 1; i <= 9; i++) {
+                System.out.printf("%d * %d = %d\n", nowDan, i, nowDan * i);
+            }
+        }
+    }
+
+    private void loopUniCode() {
+        for (char c = '가'; c <= '힣'; c += 200) {
+            System.out.printf("%c ", c);
+        }
+        System.out.println();
 
     }
+
+    private void loopChar() {
+        for (int c = 65; c <= 'Z'; c++) {
+            System.out.printf("%d:%c ", c, c);
+        }
+        System.out.println();
+        for (int c = 'A'; c <= 'Z'; c++) {
+            System.out.printf("%d ", c);
+        }
+        System.out.println();
+        for (char c = 'a'; c <= 'z'; c++) {
+            System.out.printf("%c ", c);
+        }
+        System.out.println();
+        for (char c = 'a'; c <= 'z'; c++) {
+            System.out.print(c+" ");
+        }
+        System.out.println();
+    }
+
+
+    private void findOdd(int range) {
+        System.out.print("홀수 : ");
+        for (int i = 0; i <= range; i++) {
+            if ((i & 1) == 1) System.out.print(i + " ");
+        }
+        System.out.println();
+
+    }
+
+    private void findEven(int range) {
+        System.out.print("짝수 : ");
+
+        for (int i = 0; i <= range; i++) {
+            if ((i & 1) == 0) System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
 
     private void enhancedSwitchSeason(int month) {
         System.out.print("오늘은 " + month + "월 : ");
@@ -56,6 +135,18 @@ public class Task1 {
                 System.out.printf("  ");
             }
             System.out.println(i);
+        }
+
+
+        int[] arr = {1, 2, 3, 4, 5};
+        for (int i = arr.length - 1; 0 <= i; i--) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+        Collections.reverse(Arrays.asList(arr));
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
