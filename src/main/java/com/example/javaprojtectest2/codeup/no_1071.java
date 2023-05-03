@@ -12,5 +12,11 @@ public class no_1071 {
             }
             System.out.println(now);
         }
+
+        int now = sc.nextInt();
+        do{
+            System.out.println(now);
+            now = sc.nextInt(); //틀림 만약 처음이 0이라면?의 문제
+        }while(now!=0);
     }
 }
