@@ -30,9 +30,9 @@ public class no_1099 {
 
             map[mvX][mvY] = 9;
             if (mvY + 1 < SIZE && map[mvX][mvY + 1] != 1) {
-                mvY+=1;
+                mvY++;
             } else if (mvX + 1 < SIZE && map[mvX + 1][mvY] != 1) {
-                mvX+=1;
+                mvX++;
             } else {
                 break;// 갈 수 있는 길이 없음
             }
