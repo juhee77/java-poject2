@@ -6,6 +6,21 @@ import java.io.IOException;
 import java.util.UUID;
 
 public abstract class ShapeDrawer {
+    public String spaceChar = "0";
+    public String fillStr = "*";
+
+    public ShapeDrawer(String spaceChar, String fillStr) {
+        this.spaceChar = spaceChar;
+        this.fillStr = fillStr;
+    }
+
+    public ShapeDrawer(String spaceChar) {
+        this.spaceChar = spaceChar;
+    }
+
+    public ShapeDrawer() {
+    }
+
     public void printShape(int height) {
         for (int i = 0; i < height; i++) {
             System.out.print(makeALine(height, i));
@@ -30,6 +45,13 @@ public abstract class ShapeDrawer {
         return bw;
     }
 
+    public BufferedOutputStream printShapeFullBw(int height, BufferedOutputStream bw) throws IOException {
+        for (int i = 0; i < height; i++) {
+            bw.write(makeFullLine(height, i).getBytes());
+        }
+        return bw;
+    }
+
     public void printShapeToFile(int height) throws IOException {
         String uid = UUID.randomUUID().toString();
         BufferedOutputStream bw = new BufferedOutputStream(new FileOutputStream("src/main/java/com/example/javaprojtectest2/week4/day3/makeImgFile/EACH" + uid));
@@ -39,7 +61,7 @@ public abstract class ShapeDrawer {
     public void printShapeWithFullToFile(int height) throws IOException {
         String uid = UUID.randomUUID().toString();
         BufferedOutputStream bw = new BufferedOutputStream(new FileOutputStream("src/main/java/com/example/javaprojtectest2/week4/day3/makeImgFile/FULL" + uid));
-        convertToFile(printShapeBw(height, bw));
+        convertToFile(printShapeFullBw(height, bw));
     }
 
     public void convertToFile(BufferedOutputStream br) throws IOException {

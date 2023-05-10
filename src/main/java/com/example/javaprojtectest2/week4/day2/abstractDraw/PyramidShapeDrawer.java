@@ -1,16 +1,12 @@
 package com.example.javaprojtectest2.week4.day2.abstractDraw;
 
 public class PyramidShapeDrawer extends ShapeDrawer {
-    private String spaceChar = "0";
-    private String fillStr = "*";
-
     public PyramidShapeDrawer(String spaceChar, String fillStr) {
-        this.spaceChar = spaceChar;
-        this.fillStr = fillStr;
+        super(spaceChar,fillStr);
     }
 
     public PyramidShapeDrawer(String spaceChar) {
-        this.spaceChar = spaceChar;
+        super(spaceChar);
     }
 
     public PyramidShapeDrawer() {
