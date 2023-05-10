@@ -1,4 +1,4 @@
-package com.example.javaprojtectest2.week4.day2;
+package com.example.javaprojtectest2.week4.day2.abstractDraw;
 
 public class PyramidShapeDrawer extends ShapeDrawer {
     private String spaceChar = "0";
