@@ -1,9 +1,6 @@
 package com.example.javaprojtectest2.week4.day4.lectureFullCode;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 class Student {
   private String code;
@@ -99,21 +96,39 @@ public class Codeup3108 {
        }
    }
 
-   public static void main(String[] args) {
-       int size = 1;
+//   public static void main(String[] args) {
+//       int size = 1;
+//
+//       Codeup3108 codeup3108 = new Codeup3108();
+//       codeup3108.process("I 1011 한라산");
+//       codeup3108.process("I 999 백두산");
+//       codeup3108.process("I 999 오대산");
+//       codeup3108.process("D 999 백두산");
+//       codeup3108.process("I 800 백두산");
+//       codeup3108.process("D 500 한라산");
+//       codeup3108.process("I 900 남산");
+//       codeup3108.process("I 950 금강산");
+//       codeup3108.process("I 1205 지리산");
+//       codeup3108.process("I 700 북한산");
+//       codeup3108.printSpecificStudents(new int[]{1, 2, 4, 5, 6});
+//
+//   }
 
-       Codeup3108 codeup3108 = new Codeup3108();
-       codeup3108.process("I 1011 한라산");
-       codeup3108.process("I 999 백두산");
-       codeup3108.process("I 999 오대산");
-       codeup3108.process("D 999 백두산");
-       codeup3108.process("I 800 백두산");
-       codeup3108.process("D 500 한라산");
-       codeup3108.process("I 900 남산");
-       codeup3108.process("I 950 금강산");
-       codeup3108.process("I 1205 지리산");
-       codeup3108.process("I 700 북한산");
-       codeup3108.printSpecificStudents(new int[]{1, 2, 4, 5, 6});
-   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Codeup3108 codeup3108 = new Codeup3108();
+        int size = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < size; i++) {
+            String line = sc.nextLine();
+            codeup3108.process(line);
+        }
+        String[] arr2 = sc.nextLine().split(" ");
+        int[] arr3 = new int[arr2.length];
+        for (int i = 0; i < arr2.length; i++) {
+            arr3[i] = Integer.parseInt(arr2[i]);
+        }
+        codeup3108.printSpecificStudents(arr3);
+    }
 }
 
