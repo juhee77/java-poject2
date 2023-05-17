@@ -1,12 +1,12 @@
-package week5.day2;
+package com.example.javaprojtectest2.week5.day2;
 
 import org.junit.jupiter.api.Test;
-import week5.day2.abstractEx.InsertionSortAbstract;
-import week5.day2.abstractEx.SelectionSortAbstract;
-import week5.day2.abstractEx.SortAbstract;
-import week5.day2.interfaceEx.InsertionSortInterface;
-import week5.day2.interfaceEx.SelectionSortInterface;
-import week5.day2.interfaceEx.SortInterface;
+import com.example.javaprojtectest2.week5.day2.abstractEx.InsertionSortAbstract;
+import com.example.javaprojtectest2.week5.day2.abstractEx.SelectionSortAbstract;
+import com.example.javaprojtectest2.week5.day2.abstractEx.SortAbstract;
+import com.example.javaprojtectest2.week5.day2.interfaceEx.InsertionSortInterface;
+import com.example.javaprojtectest2.week5.day2.interfaceEx.SelectionSortInterface;
+import com.example.javaprojtectest2.week5.day2.interfaceEx.SortInterface;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 

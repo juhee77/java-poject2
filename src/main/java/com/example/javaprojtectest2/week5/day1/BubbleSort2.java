@@ -1,20 +1,20 @@
-package week5.day1;
+package com.example.javaprojtectest2.week5.day1;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class BubbleSort {
+public class BubbleSort2 {
     private final Comparator<Integer> comparator;
 
-    public BubbleSort(Comparator<Integer> comparator) {
+    public BubbleSort2(Comparator<Integer> comparator) {
         this.comparator = comparator;
     }
 
     public int[] sortAround(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (comparator.compare(arr[j], arr[j + 1]) > 0) {
-                    swap(arr, j, j + 1);
+            for (int j = arr.length - 1; i < j; j--) {
+                if (comparator.compare(arr[j], arr[j - 1]) < 0) {
+                    swap(arr, j, j - 1);
                 }
             }
         }

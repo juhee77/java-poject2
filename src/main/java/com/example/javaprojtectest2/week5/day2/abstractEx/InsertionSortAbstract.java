@@ -1,4 +1,4 @@
-package week5.day2.abstractEx;
+package com.example.javaprojtectest2.week5.day2.abstractEx;
 
 
 import java.util.Arrays;

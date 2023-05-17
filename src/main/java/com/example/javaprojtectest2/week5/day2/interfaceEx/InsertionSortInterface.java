@@ -1,4 +1,4 @@
-package week5.day2.interfaceEx;
+package com.example.javaprojtectest2.week5.day2.interfaceEx;
 
 
 import java.util.Arrays;
