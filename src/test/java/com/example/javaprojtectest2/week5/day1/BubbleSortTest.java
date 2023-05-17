@@ -1,5 +1,7 @@
-package week5.day1;
+package com.example.javaprojtectest2.week5.day1;
 
+import com.example.javaprojtectest2.week5.day1.BubbleSort;
+import com.example.javaprojtectest2.week5.day1.BubbleSort2;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

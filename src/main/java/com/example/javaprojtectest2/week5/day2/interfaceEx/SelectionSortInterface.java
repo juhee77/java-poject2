@@ -1,7 +1,7 @@
-package week5.day2.abstractEx;
+package com.example.javaprojtectest2.week5.day2.interfaceEx;
 
 
-public class SelectionSortAbstract extends SortAbstract {
+public class SelectionSortInterface implements SortInterface {
     @Override
     public <T extends Comparable<T>> void sort(T[] arr) {
         int n = arr.length;

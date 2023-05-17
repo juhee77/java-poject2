@@ -1,8 +1,8 @@
-package week5.day2;
+package com.example.javaprojtectest2.week5.day2;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import week5.day2.interfaceEx.InsertionSortInterface;
+import com.example.javaprojtectest2.week5.day2.interfaceEx.InsertionSortInterface;
 
 import static org.junit.jupiter.api.Assertions.*;
 

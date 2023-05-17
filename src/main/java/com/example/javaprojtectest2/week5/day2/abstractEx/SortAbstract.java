@@ -1,4 +1,4 @@
-package week5.day2.abstractEx;
+package com.example.javaprojtectest2.week5.day2.abstractEx;
 
 public abstract class SortAbstract {
     //abstract <T extends Comparable<T>> void sort(T[] arr);
