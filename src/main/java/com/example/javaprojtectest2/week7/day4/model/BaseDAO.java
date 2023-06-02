@@ -11,22 +11,18 @@ public class BaseDAO {
     protected PreparedStatement psmt = null;
     protected ResultSet rs = null;
 
-    protected void getConn() throws ClassNotFoundException, SQLException {
-        Map<String, String> env = getenv();
-        String dbHost = env.get("DB_HOST");
-        String dbUser = env.get("DB_USER");
-        String dbPassword = env.get("DB_PASSWORD");
-
-        Class.forName("com.mysql.cj.jdbc.Driver");
+    protected void getConn() {
+        String url = "jdbc:sqlite:world.db";
+        String user = "";
+        String pw = "";
 
         try {
-            conn = DriverManager.getConnection(
-                    "jdbc:mysql://" + dbHost + "/likelion", dbUser, dbPassword
-            );
+            conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
 
     protected void close() {
         try {

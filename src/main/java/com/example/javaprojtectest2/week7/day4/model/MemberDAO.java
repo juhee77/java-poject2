@@ -22,8 +22,6 @@ public class MemberDAO extends BaseDAO {
             smt.executeUpdate(sql);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         } finally {
             close();
         }
@@ -49,7 +47,7 @@ public class MemberDAO extends BaseDAO {
                     return Optional.of(new Member(rid, risLogined));
                 }
             }
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
         } finally {
             close();
@@ -68,8 +66,6 @@ public class MemberDAO extends BaseDAO {
             cnt = psmt.executeUpdate();
         } catch (SQLException e) {
             System.err.println(e.getMessage());
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
         } finally {
             close();
         }
@@ -96,7 +92,7 @@ public class MemberDAO extends BaseDAO {
                     return Optional.of(new Member(rid, risLogined));
                 }
             }
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
         } finally {
             close();
