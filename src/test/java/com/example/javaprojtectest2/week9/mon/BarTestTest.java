@@ -8,8 +8,8 @@ class BarTestTest {
     @Test
     public void test() {
         BarTest barTest = new BarTest();
-        assertThat(barTest.isRightBar("({{()(){}{}{}}}) ")).isTrue();
+        assertThat(barTest.isRightBar("({{()(){}{}{}}})")).isTrue();
         assertThat(barTest.isRightBar("[{((){}[])}]{}()")).isTrue();
-        assertThat(barTest.isRightBar("{{()(){}{}{}}}) ")).isFalse();
+        assertThat(barTest.isRightBar("{{()(){}{}{}}})")).isFalse();
     }
 }
