@@ -48,10 +48,10 @@ class MyQueueTest {
     @Test
     public void test3(){
         //원형큐를 이용하는 경우
-        MyQueueByArr queue = new MyQueueByArr(4);
+        MyQueueByCircularArr queue = new MyQueueByCircularArr(4);
         assertThat(queue.capacity()).isEqualTo(4);
         queue.enqueue(5);
-        queue.enqueue(4);
+        queue.enqueue(10);
         queue.enqueue(15);
         assertThat(queue.size()).isEqualTo(3);
         assertThat(queue.dequeue()).isEqualTo(5);
@@ -61,6 +61,8 @@ class MyQueueTest {
         assertThat(queue.size()).isEqualTo(3);
 
         queue.enqueue(35);
+        //10 15 20 35
+        assertThat(queue.peek()).isEqualTo(10);
         assertThat(queue.size()).isEqualTo(4); //가능은 하지만 비 효율적
     }
 
